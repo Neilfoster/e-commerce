@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Neilfoster/e-commerce.svg?branch=master)](https://travis-ci.org/Neilfoster/e-commerce)
+
 # Code Institute
 
 Welcome Neilfoster,
