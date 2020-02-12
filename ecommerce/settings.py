@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 
 
-if "DATABASE_URL" is on.environ:
+if "DATABASE_URL" is os.environ:
     DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
 else:
     print ("Database URL not found. Using SQlite instead")
