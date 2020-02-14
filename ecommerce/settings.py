@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
-# import env
+import env
 import dj_database_url 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['neils-ecommerce.herokuapp.com']
+ALLOWED_HOSTS = ['localhost','neils-ecommerce.herokuapp.com']
 
 
 # Application definition
@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 
 
-if "DATABASE_URL" is os.environ:
+if "DATABASE_URL" in os.environ:
     DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
 else:
     print ("Database URL not found. Using SQlite instead")
